@@ -1,0 +1,14 @@
+.filterbanner-tablet {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 8.06vw;
+    .select {
+      width: 20vw;
+      .select-mobile {
+        padding: 0 1.2vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  font-size: 1vw;
+  font-weight: 600;
+  font-family: $font-manrope;
+  cursor: pointer;
+  border-radius: 0.75vw !important;
+  padding: 1.09vw 2vw !important;
+  background: $colorPrimary !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  span {
+    transition: all .4s;
+  }
+  &:hover {
+    scale: 1.03;
+    span {
+      transform: translateY(-200%);
+    }
+  }
+  // @media screen and (min-width: 769px) and (max-width: 1280px) {
+  //   font-size: 1.5vw;
+  // }
+  @media screen and (max-width: 767px) {
+      span {
+        transition: none;
+      }
+      &:hover {
+      span {
+        transform: translateY(0%);
+      }
+  }
+  }
+}
+
+.btn-secondary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  font-size: 1vw;
+  font-weight: 600;
+  font-family: $font-manrope;
+  cursor: pointer;
+  border-radius: 0.75vw !important;
+  padding: 1.09vw 2vw !important;
+  border: 1px solid rgba(46, 46, 46, 0.6);
+  background: #fff;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  span {
+    transition: all .4s;
+  }
+  &:hover {
+    scale: 1.03;
+    span {
+      transform: translateY(-200%);
+    }
+  }
+  // @media screen and (min-width: 769px) and (max-width: 1280px) {
+  //   font-size: 1.5vw;
+  // }
+}
+
+.btn-secondary::before,
+.btn-primary::before {
+    text-align: center;
+    content: ''attr(content)'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(200%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+}
+
+.btn-secondary:hover::before,.btn-primary:hover::before {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 1280px) {
+  .menu-table {
+    font-size: 3.2vw;
+    padding: 3vw 6vw !important ;
+    border-radius: 2.13vw !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn-secondary,
+  .btn-primary {
+    font-size: 3.2vw;
+    padding: 3.2vw 7.73vw !important;
+    border-radius: 2.13vw !important;
+  }
+}
+

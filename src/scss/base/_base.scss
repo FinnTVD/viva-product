@@ -1,0 +1,166 @@
+body {
+  box-sizing: border-box;
+  font-family: $font-helvetica !important;
+  color: $textColorPrimary !important;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+.content {
+  width: 83.75%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
+    padding: 0 8.06vw;
+    // margin: 0;
+  }
+  @include mobile {
+    width: 100%;
+    margin: 0;
+    padding: 0 4.27vw;
+  }
+}
+.transform-component-module_wrapper__SPB86 {
+  width: 100% !important;
+  // height: 100% !important;
+}
+
+@include mobile {
+  // .content {
+  //   width: 100%;
+  //   padding-left: 4.27vw;
+  //   padding-right: 4.27vw;
+  // }
+
+  .hidden-scroll {
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      width: 0px !important;
+      background-color: transparent !important;
+    }
+    /* Track */
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.text_menu {
+  transition: all 0.3s;
+  position: relative;
+  transition: background-size 350ms;
+  background: linear-gradient(0deg, black, black) no-repeat right bottom/0 1px;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+.text_menu_tour {
+  transition: all 0.3s;
+  position: relative;
+  transition: background-size 350ms;
+  background: linear-gradient(0deg, white, white) no-repeat right bottom/0 1px;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.box_item_menu {
+  &:hover .text_menu {
+    background-size: 100% 1px;
+    background-position-x: left;
+  }
+}
+
+.ourTour_menu {
+  overflow: hidden;
+  .bg-menuOverlaySty,
+  .bgImg-MenuOurTour {
+    transition: all 0.3s;
+  }
+  img {
+    transition: all 0.3s;
+    overflow: hidden;
+  }
+  &:hover > img {
+    transform: scale(1.2);
+    border-radius: 0 !important;
+  }
+  &:hover .text_menu_tour {
+    background-size: 100% 1px;
+    background-position-x: left;
+  }
+  &:hover .bg-menuOverlaySty {
+    border-radius: 0;
+  }
+  &:hover .bgImg-MenuOurTour {
+    border-radius: 0;
+  }
+}
+
+.modalConfirm > img {
+  top: 4.53vw;
+}
+
+.text-editor {
+  font-size: 1.125vw;
+  line-height: 1.5;
+  ul {
+    list-style: disc;
+    margin-left: 1.5vw;
+  }
+  i,em {
+    font-style: italic;
+  }
+  b {
+    font-style: bold;
+  }
+}
+
+@media screen and (max-width: 768.9px) {
+  .text-editor {
+    font-size: 3.733vw;
+  }
+}
+
+.mui-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  // background-color: unset !important;
+  backdrop-filter: blur(4px);
+}
+
+.MuiPaper-root .MuiPaper-elevation .MuiPaper-rounded {
+  max-width: 100% !important;
+}
+
+.mui-ypiqx9-MuiDialogContent-root {
+  padding: 0 !important;
+}
+.mui-xq08gh-MuiFormHelperText-root {
+  font-size: 1rem !important;
+  color: red !important;
+}

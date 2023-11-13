@@ -1,0 +1,61 @@
+.filter-tour {
+  box-shadow: 6px 0px 30px 0px rgba(0, 0, 0, 0.05);
+}
+.select {
+  position: relative;
+  &:not(:nth-child(1)):before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 2.43vw;
+    background: #ccc;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+.bgFilterMobile {
+  @include mobile {
+    position: absolute;
+    inset: 0;
+    background: #171717;
+    opacity: 0.04;
+    border-radius: 1.06667vw;
+  }
+}
+.select-mobile {
+  @media screen and (max-width: 767px) {
+    padding: 0 4.27vw;
+  }
+  .MuiFormControl-root {
+    flex: 1;
+  }
+}
+.filterMobile {
+  position: relative;
+  .bg-mobile {
+    background: #171717 !important;
+    opacity: 0.04;
+    position: absolute;
+    inset: 0;
+    border-radius: 1.06667vw;
+  }
+}
+
+.travelStyle-Mb {
+  .select {
+    .bg-mobile {
+      @media screen and (max-width: 768px) {
+        background: #171717;
+        opacity: 0.04;
+        position: absolute;
+        inset: 0;
+        border-radius: 1.06667vw;
+      }
+    }
+  }
+}
